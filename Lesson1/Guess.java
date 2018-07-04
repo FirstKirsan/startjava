@@ -1,6 +1,6 @@
 public class Guess {
 	public static void main(String[] args) {
-		int compNumber = 100;
+		int compNumber = 21;
 		int myNumber = 63;
 		int max = 101;
 		int min = 0;
