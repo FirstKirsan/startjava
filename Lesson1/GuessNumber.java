@@ -1,10 +1,9 @@
-public class Guess {
+public class GuessNumber {
 	public static void main(String[] args) {
 		int compNumber = 21;
 		int myNumber = 63;
 		int max = 101;
 		int min = 0;
-
 		while (compNumber != myNumber) {
 			if (compNumber > myNumber) {
 				System.out.println("Введенное вами число меньше того, что загадал компьютер");
@@ -17,9 +16,7 @@ public class Guess {
 				myNumber = min + (myNumber - min)/2;
 				System.out.println(myNumber);
 			}
-
 		}
 		System.out.println("Вы угадали!");
-	}
-	
+	}	
 }
