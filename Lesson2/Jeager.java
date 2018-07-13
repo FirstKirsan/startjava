@@ -1,30 +1,20 @@
 public class Jeager {
 	private String modelName;
 	private String mark;
-	private String origin;
+	private String status;
 	private float height;
 	private float weight;
-	private int speed;
-	private int strenght;
-	private int armor;
+	private String weapon;
+	private String equipment;
 
-	public Jeager(String modelName, String mark, String origin, float height, float weight, int speed, int strenght, int armor) {
-		this.modelName = modelName;
-		this.mark = mark;
-		this.origin = origin;
-		this.height = height;
-		this.weight = weight;
-		this.speed = speed;
-		this.strenght = strenght;
-		this.armor = armor;
-	}
+
 
 	public boolean drift() {
 		System.out.println("Вы вошли в дрифт");
 		return true;
 	}
 	public void move() {
-		System.out.println("Вы прошли " + speed+ " шагов");
+		System.out.println("Вы прошли 7 шагов");
 	}
 	public String scanKaiju() {
 		return "nothing";
@@ -33,7 +23,7 @@ public class Jeager {
 
 	}
 	public String toString() {
-		return "modelName: " + modelName + "; Mark: " + mark + "; Origin: " + origin;
+		return "modelName: " + modelName + "; Mark: " + mark + "; Status: " + status + "; Height: " + height + "; Weapon: " + weapon;
 	}
 
 	public String getModelName() {
@@ -50,11 +40,11 @@ public class Jeager {
 		this.mark = mark;
 	}
 
-	public String getOrigin() {
-		return origin;
+	public String getStatus() {
+		return status;
 	}
-	public void setOrigin(String origin) {
-		this.origin = origin;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public float getHeight() {
@@ -71,24 +61,17 @@ public class Jeager {
 		this.weight = weight;
 	}
 
-	public int getSpeed() {
-		return speed;
+	public String getWeapon() {
+		return weapon;
 	}
-	public void setSpeed(int speed) {
-		this.speed = speed;
-	}
-
-	public int getStrenght() {
-		return strenght;
-	}
-	public void setStrenght(int strenght) {
-		this.strenght = strenght;
+	public void setWeapon(String weapon) {
+		this.weapon = weapon;
 	}
 
-	public int getArmor() {
-		return armor;
+	public String getEquipment() {
+		return equipment;
 	}
-	public void setArmor(int armor) {
-		this.armor = armor;
-	}		
+	public void setEquipment(String equipment) {
+		this.equipment = equipment;
+	}
 }
