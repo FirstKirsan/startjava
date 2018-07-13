@@ -17,6 +17,9 @@ public class JeagerTest {
 		jeagerTwo.setHeight(259);
 		jeagerTwo.setWeapon("Grappling Hook Cables");
 
+		jeagerOne.drift();
+		jeagerTwo.move();
+
 		System.out.println(jeagerOne);
 		System.out.println(jeagerTwo);
 	}
