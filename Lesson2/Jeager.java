@@ -7,25 +7,6 @@ public class Jeager {
 	private String weapon;
 	private String equipment;
 
-
-
-	public boolean drift() {
-		System.out.println("Вы вошли в дрифт");
-		return true;
-	}
-	public void move() {
-		System.out.println("Вы прошли 7 шагов");
-	}
-	public String scanKaiju() {
-		return "nothing";
-	}
-	public void useVortexCannon() {
-
-	}
-	public String toString() {
-		return "modelName: " + modelName + "; Mark: " + mark + "; Status: " + status + "; Height: " + height + "; Weapon: " + weapon;
-	}
-
 	public String getModelName() {
 		return modelName;
 	}
@@ -74,4 +55,21 @@ public class Jeager {
 	public void setEquipment(String equipment) {
 		this.equipment = equipment;
 	}
+
+	public boolean drift() {
+		System.out.println("Вы вошли в дрифт");
+		return true;
+	}
+	public void move() {
+		System.out.println("Вы прошли 7 шагов");
+	}
+	public String scanKaiju() {
+		return "nothing";
+	}
+
+	public String toString() {
+		return "modelName: " + modelName + "; Mark: " + mark + "; Status: " + status + "; Height: " + height + "; Weapon: " + weapon;
+	}
+
+
 }
