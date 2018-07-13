@@ -2,13 +2,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
-    Player player1 = new Player();
-    Player player2 = new Player();
-
-    public GuessNumber() {
-        player1.setName("Vasya");
-        player2.setName("Masha");
-    }
+    Player player1 = new Player("Vasya");
+    Player player2 = new Player("Masha");
 
     public void game () {
         Random random = new Random();
