@@ -1,4 +1,4 @@
-public class Jeager {
+public class Jaeger {
 	private String modelName;
 	private String mark;
 	private String status;
@@ -6,6 +6,14 @@ public class Jeager {
 	private float weight;
 	private String weapon;
 	private String equipment;
+
+	public Jaeger(String modelName, String mark, String status, float height, String weapon) {
+		this.modelName = modelName;
+		this.mark = mark;
+		this.status = status;
+		this.height = height;
+		this.weapon = weapon;
+	}
 
 	public String getModelName() {
 		return modelName;
