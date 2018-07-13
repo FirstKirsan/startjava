@@ -7,12 +7,14 @@ public class Jaeger {
 	private String weapon;
 	private String equipment;
 
-	public Jaeger(String modelName, String mark, String status, float height, String weapon) {
+	public Jaeger(String modelName, String mark, String status, float height, float weight, String weapon, String equipment) {
 		this.modelName = modelName;
 		this.mark = mark;
 		this.status = status;
 		this.height = height;
+		this.weight = weight;
 		this.weapon = weapon;
+		this.equipment = equipment;
 	}
 
 	public String getModelName() {
@@ -76,7 +78,7 @@ public class Jaeger {
 	}
 
 	public String toString() {
-		return "modelName: " + modelName + "; Mark: " + mark + "; Status: " + status + "; Height: " + height + "; Weapon: " + weapon;
+		return "modelName: " + modelName + "; Mark: " + mark + "; Status: " + status + "; Height: " + height + "; Weight: " + weight + "; Weapon: " + weapon + "; Equipment: " + equipment;
 	}
 
 
