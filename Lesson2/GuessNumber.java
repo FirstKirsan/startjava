@@ -2,15 +2,21 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
-    Player player1 = new Player("Vasya");
-    Player player2 = new Player("Masha");
+    private Player player1, player2;
+    private boolean continueGame;
+    private int compNumber;
 
-    public void game () {
+    public GuessNumber(Player player1, Player player2) {
+        this.player1 = player1;
+        this.player2 = player2;
+    }
+
+    public void start() {
         Random random = new Random();
-        int compNumber = random.nextInt(100);
+        compNumber = random.nextInt(101);
         System.out.println("compNumber = "+compNumber);
         int number;
-        boolean continueGame = true;
+        continueGame = true;
         Scanner scan = new Scanner(System.in);
 
         while (continueGame) {
@@ -22,21 +28,24 @@ public class GuessNumber {
             number = scan.nextInt();
             player2.setNumber(number);
 
-            if (player1.getNumber() == compNumber) {
-                System.out.println(player1.getName() + " вы угадали!");
-                continueGame = false;
+            testNumber(player1);
+            testNumber(player2);
 
+            if (continueGame) {
+                System.out.println("Никто не угадал, попробуйте ещё раз!");
             }
-
-            if (player2.getNumber() == compNumber) {
-                System.out.println(player2.getName() + " вы угадали!");
-                continueGame = false;
-
-            }
-
-            if (continueGame) System.out.println("Никто не угадал, попробуйте ещё раз!");
         }
 
     }
 
+    public void testNumber(Player player) {
+        if (player.getNumber() == compNumber) {
+            System.out.println(player.getName() + " вы угадали!");
+            continueGame = false;
+        } else if (player.getNumber() > compNumber) {
+            System.out.println(player.getName() + ", введенное вами число больше того, что загадал компьютер");
+        } else {
+            System.out.println(player.getName() + ", введенное вами число меньше того, что загадал компьютер");
+        }
+    }
 }
