@@ -2,7 +2,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
-    private Player player1, player2;
+    private Player player1;
+    private Player player2;
     private boolean continueGame;
     private int compNumber;
 
@@ -14,7 +15,7 @@ public class GuessNumber {
     public void start() {
         Random random = new Random();
         compNumber = random.nextInt(101);
-        System.out.println("compNumber = "+compNumber);
+        System.out.println("compNumber = " + compNumber);
         int number;
         continueGame = true;
         Scanner scan = new Scanner(System.in);
