@@ -41,7 +41,7 @@ public class GuessNumber {
 
     public void testNumber(Player player) {
         if (player.getNumber() == compNumber) {
-            System.out.println(player.getName() + " вы угадали!");
+            System.out.println(player.getName() + ", вы угадали!");
             continueGame = false;
         } else if (player.getNumber() > compNumber) {
             System.out.println(player.getName() + ", введенное вами число больше того, что загадал компьютер");
