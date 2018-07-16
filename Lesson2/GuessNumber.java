@@ -32,8 +32,7 @@ public class GuessNumber {
     }
     public void inputNumber(Player player) {
         System.out.print(player.getName() + ", введите число: ");
-        number = scan.nextInt();
-        player.setNumber(number);        
+        player.setNumber(scan.nextInt());        
     }
     public void testNumber(Player player) {
         if (player.getNumber() == compNumber) {
