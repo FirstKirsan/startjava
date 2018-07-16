@@ -6,7 +6,6 @@ public class GuessNumber {
     private Player player2;
     private boolean isContinueGame;
     private int compNumber;
-    private int number;
     private Scanner scan = new Scanner(System.in);
 
     public GuessNumber(Player player1, Player player2) {
