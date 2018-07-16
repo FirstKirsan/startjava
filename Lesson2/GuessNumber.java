@@ -30,9 +30,12 @@ public class GuessNumber {
                 System.out.println("Никто не угадал, попробуйте ещё раз!");
             }
         }
-
     }
-
+    public void inputNumber(Player player) {
+        System.out.print(player.getName() + ", введите число: ");
+        number = scan.nextInt();
+        player.setNumber(number);        
+    }
     public void testNumber(Player player) {
         if (player.getNumber() == compNumber) {
             System.out.println(player.getName() + ", вы угадали!");
@@ -42,11 +45,5 @@ public class GuessNumber {
         } else {
             System.out.println(player.getName() + ", введенное вами число меньше того, что загадал компьютер");
         }
-    }
-
-    public void inputNumber(Player player) {
-        System.out.print(player.getName() + ", введите число: ");
-        number = scan.nextInt();
-        player.setNumber(number);        
     }
 }
