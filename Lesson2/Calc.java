@@ -1,28 +1,38 @@
 import java.util.Scanner;
 
 public class Calc {
-	String mathOperation;
-    int numberOne;
-    int numberTwo;
+	private char mathOperation;
+    private int numberOne;
+    private int numberTwo;
+
+    public void setMathOperation(char mathOperation) {
+    	this.mathOperation = mathOperation;
+    }
+    public void setNumberOne(int numberOne) {
+    	this.numberOne = numberOne;
+    }
+    public void setNumberTwo(int numberTwo) {
+    	this.numberTwo = numberTwo;
+    }
 
 	public void start() {
 		switch (mathOperation) {
-			case "*": 
+			case '*': 
 				System.out.println(numberOne * numberTwo);
 				break;
-			case "/":
+			case '/':
 				System.out.println(numberOne / numberTwo);
 				break;
-			case "+":
+			case '+':
 				System.out.println(numberOne + numberTwo);
 				break;
-			case "-":
+			case '-':
 				System.out.println(numberOne - numberTwo);
 				break;
-			case "%":
+			case '%':
 				System.out.println(numberOne % numberTwo);
 				break;
-			case "^":
+			case '^':
 				System.out.println(pow(numberOne, numberTwo));
 				break;
 			default: 

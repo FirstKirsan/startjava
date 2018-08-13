@@ -6,19 +6,20 @@ public class CalcTest {
 		Scanner scan = new Scanner(System.in);
         Calc calc = new Calc();
 
+        System.out.println("Калькулятор запущен.");
         while (answer.equals("да")) {
             System.out.print("Введите первое число: ");
-            calc.numberOne = scan.nextInt();
+            calc.setNumberOne(scan.nextInt());
             System.out.print("Введите знак математической операции: ");
-            calc.mathOperation = scan.next();
+            calc.setMathOperation(scan.next().charAt(0));
             System.out.print("Введите второе число: ");
-            calc.numberTwo = scan.nextInt();
+            calc.setNumberTwo(scan.nextInt());
             calc.start();
             do {
                 System.out.print("Хотите продолжить? [да/нет]: ");
                 answer = scan.next();
             } while (!answer.equals("да") && !answer.equals("нет"));
         }        
-        System.out.println("The END");
+        System.out.println("Калькулятор завершен.");
 	}
 }
