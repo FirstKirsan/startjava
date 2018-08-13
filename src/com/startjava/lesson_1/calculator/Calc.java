@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.calculator;
+
 public class Calc {
 	public static void main (String[] args) {
 		int firstNumber = 3;

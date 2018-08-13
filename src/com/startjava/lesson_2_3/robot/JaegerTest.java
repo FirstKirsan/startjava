@@ -1,3 +1,5 @@
+package com.startjava.lesson_2_3.robot;
+
 public class JaegerTest {
 	public static void main(String[] args) {
 		Jaeger jaegerOne = new Jaeger("Saber Athena", "Mark-7", "Destroyed", 252, 1628, "Ionic Twinblades, N-16 Particle Charger", "Conn-Pod Chamber, X-411 Supermetal Body Work, RG-28 Accelerator Limbs");
