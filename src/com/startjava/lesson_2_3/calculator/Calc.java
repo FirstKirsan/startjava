@@ -1,7 +1,5 @@
 package com.startjava.lesson_2_3.calculator;
 
-import java.util.Scanner;
-
 public class Calc {
 	private char mathOperation;
     private int numberOne;
@@ -19,33 +17,26 @@ public class Calc {
 
 	public void start() {
 		switch (mathOperation) {
-			case '*': 
-				System.out.println(numberOne * numberTwo);
+			case '*':
+				System.out.println(Math.multiplyExact(numberOne, numberTwo));
 				break;
 			case '/':
 				System.out.println(numberOne / numberTwo);
 				break;
 			case '+':
-				System.out.println(numberOne + numberTwo);
+				System.out.println(Math.addExact(numberOne, numberTwo));
 				break;
 			case '-':
-				System.out.println(numberOne - numberTwo);
+				System.out.println(Math.subtractExact(numberOne, numberTwo));
 				break;
 			case '%':
-				System.out.println(numberOne % numberTwo);
+				System.out.println(Math.IEEEremainder(numberOne, numberTwo));
 				break;
 			case '^':
-				System.out.println(pow(numberOne, numberTwo));
+				System.out.println(Math.pow(numberOne, numberTwo));
 				break;
 			default: 
 				System.out.println("Неизвестная операция");
 		}
-	}
-	public int pow (int base, int power) {
-		int result = 1;
-		for (int i = 0; i < power; i++) {
-			result *= base;
-		}
-		return result;
 	}
 }
